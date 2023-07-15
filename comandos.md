@@ -5,9 +5,14 @@ Ver ip
 hostname -I
 ```
 
-Ver distribución linux
+Ver distribución
 ```
 lsb_release -d
+```
+
+Ver memoria ram
+```
+free -h
 ```
 
 Ver peso de archvios agrupados en carpetas
