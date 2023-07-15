@@ -5,6 +5,11 @@ Ver ip
 hostname -I
 ```
 
+Ver distribución linux
+```
+lsb_release -d
+```
+
 Ver peso de archvios agrupados en carpetas
 ```
 du -h --max-depth=1
