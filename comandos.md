@@ -25,6 +25,11 @@ Ver shell en uso
 echo $0
 ```
 
+Ver shell disponibles
+```
+cat /etc/shells
+```
+
 Ver direccion de shell
 ```
 wich bash
