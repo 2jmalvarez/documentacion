@@ -89,17 +89,19 @@ bindkey '^[[3~' delete-char
 ```
 
 ### Fix error -> zsh: command not found: pm2
+Cambia de terminal a la bash
 ```
 /usr/bin/bash
 ```
+Muestra la ruta donde esta instalado pm2
 ```
  whereis pm2
 ```
-copiar ruta hasta el /bin
+Abre el archivo de configuracion de ZSH
 ```
  nano ~/.zshrc
 ```
-agregar al final
+Agregar al final
 ```
 # Agregar ruta pm2
 export PATH=$PATH:/home/pm2/.nvm/versions/node/v16.20.0/bin
