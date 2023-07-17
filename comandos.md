@@ -20,6 +20,21 @@ Ver peso de archvios agrupados en carpetas
 du -h --max-depth=1
 ```
 
+Ver shell en uso
+```
+echo $0
+```
+
+Ver direccion de shell
+```
+wich bash
+```
+
+Cambiar shell
+```
+chsh -s $(which zsh)
+```
+
 ## Instalar terminal zsh
 ```
 sudo apt update && sudo apt install zsh
