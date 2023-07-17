@@ -36,6 +36,21 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 vim ~/.zshrc # Cambiar a tema ZSH_THEME="crcandy" y despues :wq
 ```
+
+**zsh-syntax-highlighting** te muestra qué comandos están bien escritos o si existen y también los que están mal escritos o no existen. 
+
+```
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+```
+
+
+**zsh-autosuggestions** te muestra sugerencias y predice los que quieres hacer en base a los comandos más utilizados.
+
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
 ```
 exit 
 
