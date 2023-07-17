@@ -36,6 +36,39 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 vim ~/.zshrc # Cambiar a tema ZSH_THEME="crcandy" y despues :wq
 ```
+### Numpad y botones inicio fin sup
+Agregar al final del archivo  ~/.zshrc
+```
+# Keypad
+# 0 . Enter
+bindkey -s "^[Op" "0"
+bindkey -s "^[On" "."
+bindkey -s "^[OM" "^M"
+# 1 2 3
+bindkey -s "^[Oq" "1"
+bindkey -s "^[Or" "2"
+bindkey -s "^[Os" "3"
+# 4 5 6
+bindkey -s "^[Ot" "4"
+bindkey -s "^[Ou" "5"
+bindkey -s "^[Ov" "6"
+# 7 8 9
+bindkey -s "^[Ow" "7"
+bindkey -s "^[Ox" "8"
+bindkey -s "^[Oy" "9"
+# + -  * / =
+bindkey -s "^[Ol" "+"
+bindkey -s "^[OS" "-"
+bindkey -s "^[OR" "*"
+bindkey -s "^[OQ" "/"
+bindkey -s "^[OX" "="
+# inicio fin
+bindkey "^[[4~" end-of-line
+bindkey "^[[1~" beginning-of-line
+bindkey '^[[3~' delete-char
+```
+
+
 ### Plugins zsh
 
 **zsh-syntax-highlighting** te muestra qué comandos están bien escritos o si existen y también los que están mal escritos o no existen. 
