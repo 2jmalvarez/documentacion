@@ -20,7 +20,7 @@ Ver peso de archvios agrupados en carpetas
 du -h --max-depth=1
 ```
 
-Instalar terminal zsh
+## Instalar terminal zsh
 ```
 sudo apt update && sudo apt install zsh
 ```
@@ -36,6 +36,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 ```
 vim ~/.zshrc # Cambiar a tema ZSH_THEME="crcandy" y despues :wq
 ```
+### Plugins zsh
 
 **zsh-syntax-highlighting** te muestra qué comandos están bien escritos o si existen y también los que están mal escritos o no existen. 
 
@@ -51,10 +52,19 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
+
+Abra el documento de configuracion de ZSH:
+
 ```
-exit 
+nano ~/.zshrc
+```
 
-exit
+Añada el nombre del plugin a la lista.
 
-su - pm2
+```
+plugins=( 
+[plugins...]
+zsh-syntax-highlighting
+zsh-autosuggestions
+)
 ```
