@@ -88,6 +88,25 @@ bindkey "^[[1~" beginning-of-line
 bindkey '^[[3~' delete-char
 ```
 
+### Fix error -> zsh: command not found: pm2
+```
+/usr/bin/bash
+```
+```
+ whereis pm2
+```
+copiar ruta hasta el /bin
+```
+ nano ~/.zshrc
+```
+agregar al final
+```
+# Agregar ruta pm2
+export PATH=$PATH:/home/pm2/.nvm/versions/node/v16.20.0/bin
+```
+
+
+
 
 ### Plugins zsh
 
