@@ -142,3 +142,11 @@ zsh-syntax-highlighting
 zsh-autosuggestions
 )
 ```
+
+### Instalar Instant client ORACLE
+```
+mkdir /opt/oracle
+sudo wget https://download.oracle.com/otn/linux/instantclient/122010/instantclient-basic-linux.x64-12.2.0.1.0.zip
+sudo sh -c "echo /opt/oracle/instantclient_12_2 > /etc/ld.so.conf.d/oracle-instantclient.conf"
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
+```
