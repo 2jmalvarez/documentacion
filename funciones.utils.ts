@@ -58,3 +58,39 @@ export const agrupadorGenerico = ({
         Object.entries(d).filter((t) => !columnasParaAgrupar.includes(t[0]))
       )
     );
+
+export const downloadFile = ({
+  url = "",
+  fileName = "PDF-file.pdf",
+  setLoadding = (_: boolean) => {},
+}: {
+  url: string;
+  fileName: string;
+  setLoadding: (_: boolean) => void;
+}) => {
+  setLoadding(true);
+  fetch(url, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/pdf",
+    },
+  })
+    .then((response) => response.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(new Blob([blob]));
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = fileName;
+
+      document.body.appendChild(link);
+
+      link.click();
+
+      link.parentNode?.removeChild(link);
+    })
+    .finally(() => {
+      setLoadding(false);
+    });
+};
+
