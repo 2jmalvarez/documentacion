@@ -150,3 +150,9 @@ sudo wget https://download.oracle.com/otn/linux/instantclient/122010/instantclie
 sudo sh -c "echo /opt/oracle/instantclient_12_2 > /etc/ld.so.conf.d/oracle-instantclient.conf"
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
 ```
+
+### Eliminar toda las carpetas node_module 
+```
+cd pruebas
+find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;
+```
