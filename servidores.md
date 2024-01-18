@@ -151,7 +151,7 @@ sudo sh -c "echo /opt/oracle/instantclient_12_2 > /etc/ld.so.conf.d/oracle-insta
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
 ```
 
-### Eliminar toda las carpetas node_module 
+### Eliminar toda las carpetas node_module (BASH)
 ```
 cd pruebas
 find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;
