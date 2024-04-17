@@ -156,3 +156,76 @@ export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_2:$LD_LIBRARY_PATH
 cd pruebas
 find . -name 'node_modules' -type d -prune -print -exec rm -rf '{}' \;
 ```
+
+### Instalacion servidor
+
+Nodejs y npm
+```
+    npm -v
+    node -v
+
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+    nvm -v
+    nvm list
+    nvm install 18
+    nvm list
+    npm -v
+    node -v
+```
+PM2
+```
+    npm install pm2 -g
+    pm2 install typescript
+
+```
+Claves SSH
+```
+    cd ~/.ssh
+    ssh-keygen
+    cd ~/.ssh
+    cat id_rsa.pub
+```
+Instalacion de proyecto
+```
+    mkdir git
+    cd git/
+    git clone git@github.com:gitrepo/project.git
+
+    cd project/
+    npm i
+```
+Firewall
+```
+    ufw
+    ufw status
+    sudo ufw status
+```
+MySql
+```
+    sudo apt-get update
+    sudo apt-get install mysql-server
+    sudo mysql_secure_installation utility
+
+    sudo ufw enable
+    sudo ufw allow mysql
+    sudo ufw allow 22
+
+    sudo systemctl start mysql
+    sudo systemctl enable mysql
+    sudo systemctl restart mysql
+
+    mysql -u root -p <root_password>
+    mysql -u root
+
+    /usr/bin/mysql -u root -p
+    sudo mysql -u root
+
+    mysql -V
+    sudo mysql -u root
+```
+
