@@ -1,3 +1,16 @@
+# Comandos utiles window
+
+Ver proceso de un puerto
+```
+netstat -ano | findstr PORT_NUMBER
+```
+
+Matar proceso
+```
+taskkill /PID PID_NUMBER /F
+
+```
+
 # Comandos utiles servidores linux
 
 Ver ip
