@@ -22,7 +22,7 @@ function listDir(dirPath, prefix = "", separator = "|", exclude = []) {
     output += `${prefix}${branch}${separator} ${item.name}\n`;
 
     if (item.isDirectory()) {
-      const newPrefix = prefix + (isLastItem ? "   " : "│  ");
+      const newPrefix = prefix + (isLastItem ? "   " : "|  ");
       output += listDir(
         path.join(dirPath, item.name),
         newPrefix,
@@ -41,15 +41,18 @@ function main() {
   const projectPath = path.normalize(rawPath); // Normalize the path
   const excludeArg = process.argv[3] || ""; // Names to exclude (comma-separated)
   const excludeList = excludeArg.split(",").map((name) => name.trim()); // Convert to array
-  const separator = "|"; // Default separator
+  const separator = ">"; // Default separator
 
   if (!fs.existsSync(projectPath)) {
     console.error(`Error: The path "${projectPath}" does not exist.`);
     process.exit(1);
   }
 
-  console.log(`Listing structure of: ${projectPath}`);
+  console.log(`\nListing structure of: ${projectPath}`);
   console.log(`Excluding: ${excludeList.join(", ") || "none"}`);
+  const rootFolderName = path.basename(projectPath);
+  console.log("\n", rootFolderName);
+
   console.log(listDir(projectPath, "", separator, excludeList));
 }
 
