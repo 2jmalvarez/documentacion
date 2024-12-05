@@ -93,4 +93,3 @@ export const downloadFile = ({
       setLoadding(false);
     });
 };
-
